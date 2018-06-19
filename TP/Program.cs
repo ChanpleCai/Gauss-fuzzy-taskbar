@@ -25,11 +25,10 @@ namespace TP
                 Data = accentPtr
             };
 
-            IntPtr hwnd = FindWindowW("Shell_TrayWnd", null);
             while (true)
             {
-                SetWindowCompositionAttribute(hwnd, ref data);
-                Thread.Sleep(125);
+                SetWindowCompositionAttribute(FindWindowW("Shell_TrayWnd", null), ref data);
+                Thread.Sleep(500);
             }
 
             //Marshal.FreeHGlobal(accentPtr);
