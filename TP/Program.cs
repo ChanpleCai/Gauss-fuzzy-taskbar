@@ -11,8 +11,9 @@ namespace TP
         {
             var accent = new AccentPolicy()
             {
-                AccentState = 3,
-                AccentFlags = 0x100,
+                AccentState = 2,
+                AccentFlags = 2,
+                GradientColor = 0
             };
 
             var accentPtr = Marshal.AllocHGlobal(Marshal.SizeOf(accent));
@@ -28,7 +29,7 @@ namespace TP
             while (true)
             {
                 SetWindowCompositionAttribute(FindWindowW("Shell_TrayWnd", null), ref data);
-                Thread.Sleep(500);
+                Thread.Sleep(10);
             }
 
             //Marshal.FreeHGlobal(accentPtr);
