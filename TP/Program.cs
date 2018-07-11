@@ -29,7 +29,7 @@ namespace TP
             while (true)
             {
                 SetWindowCompositionAttribute(FindWindowW("Shell_TrayWnd", null), ref data);
-                Thread.Sleep(10);
+                Thread.Sleep(22);
             }
 
             //Marshal.FreeHGlobal(accentPtr);
